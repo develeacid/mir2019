@@ -8,12 +8,12 @@ class UserController extends Controller
 {
     public function index()
     {
-      return view('users');
+      return view('users.index');
     }
 
     public function show($id)
     {
-      Return "Mostrando detalles del usuario: {$id}";
+      return view('users.show', compact('id'));
     }
     public function create()
     {
