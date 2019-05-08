@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Area;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -12,7 +13,7 @@ class AreaSeeder extends Seeder
      */
     public function run()
     {
-      \App\Area::create([
+      Area::create([
         'name'  =>  'Direccion Tecnica'
       ]);
       //DB::table('area')->insert([

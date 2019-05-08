@@ -1,5 +1,6 @@
 <?php
-
+use app\User;
+use App\Models\Area;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -12,13 +13,13 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-      //implementacion basica para obtener el id de otra tabla
-      //ejecutamos una consulta y guardamos el resultado en una variable
-      $area = DB::table('area')->select('id')->first();//forma mas corta de capturar el primer elemento del objeto
+      //implementacion de Eloquent en la consulta
+      $area = Area::where('name','Direccion Tecnica')->value('id');
+
 
       dd($area);
 
-        DB::table('users')->insert([
+        User::Create([
           'name'      =>  'Eleacid',
           'email'     =>  'ele.leader@gmail.com',
           'nivel'     =>  'admin',
