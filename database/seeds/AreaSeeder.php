@@ -12,8 +12,11 @@ class AreaSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('area')->insert([
+      \App\Area::create([
         'name'  =>  'Direccion Tecnica'
       ]);
+      //DB::table('area')->insert([
+      //  'name'  =>  'Direccion Tecnica'
+      //]);
     }
 }
