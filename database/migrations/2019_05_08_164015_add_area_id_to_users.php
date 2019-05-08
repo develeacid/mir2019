@@ -14,7 +14,7 @@ class AddAreaIdToUsers extends Migration
     public function up()
     {
       Schema::table('users', function (Blueprint $table) {
-          $table->unsignedInteger('area_id')->after('password');
+          $table->unsignedInteger('area_id')->nullable()->after('password');
           $table->foreign('area_id')->references('id')->on('area');
       });
     }
