@@ -16,6 +16,9 @@ class AreaSeeder extends Seeder
       Area::create([
         'name'  =>  'Direccion Tecnica'
       ]);
+      Area::create([
+        'name'  =>  'Direccion Cluster'
+      ]);
       //DB::table('area')->insert([
       //  'name'  =>  'Direccion Tecnica'
       //]);
